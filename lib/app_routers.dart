@@ -1,5 +1,6 @@
 import 'package:egyptain_museaum/features/Auth/Register/presentation/screens/register_screen.dart';
-import 'package:egyptain_museaum/features/on_boarding/first_screen/first_screen.dart';
+import 'package:egyptain_museaum/features/on_boarding/screens/first_screen.dart';
+import 'package:egyptain_museaum/features/on_boarding/screens/on_boarding_screen.dart';
 import 'package:egyptain_museaum/features/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const RegisterScreen());
       case '/FirstScreen':
         return MaterialPageRoute(builder: (_) => const FirstScreen());
+      case '/OnBoardingScreen':
+        return MaterialPageRoute(builder: (_) => const OnBoardingScreen());
     }
     return null;
   }

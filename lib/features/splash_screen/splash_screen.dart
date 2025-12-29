@@ -1,6 +1,6 @@
 import 'package:egyptain_museaum/core/colors.dart';
 import 'package:egyptain_museaum/core/constants.dart';
-import 'package:egyptain_museaum/features/splash_screen/widgets/SplashProgressBar.dart';
+import 'package:egyptain_museaum/features/splash_screen/widgets/splash_progress_bar.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -10,7 +10,8 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
+class _SplashScreenState extends State<SplashScreen>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
   @override
@@ -20,17 +21,15 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   }
 
   void startAnimation() {
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 3),
-    )
-      ..addListener(() => setState(() {}))
-      ..addStatusListener((status) {
-        if (status == AnimationStatus.completed && mounted) {
-          Navigator.pushReplacementNamed(context, '/FirstScreen');
-        }
-      })
-      ..forward();
+    _controller =
+        AnimationController(vsync: this, duration: const Duration(seconds: 3))
+          ..addListener(() => setState(() {}))
+          ..addStatusListener((status) {
+            if (status == AnimationStatus.completed && mounted) {
+              Navigator.pushReplacementNamed(context, '/OnBoardingScreen');
+            }
+          })
+          ..forward();
   }
 
   @override
