@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
       ..addListener(() => setState(() {}))
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed && mounted) {
-          Navigator.pushReplacementNamed(context, '/RegisterScreen');
+          Navigator.pushReplacementNamed(context, '/FirstScreen');
         }
       })
       ..forward();
