@@ -1,0 +1,6 @@
+const String aboElhool = "assets/images/aboElhool.png";
+const String aiGuide = "assets/images/ai_Guide.png";
+const String arMagic = "assets/images/ar_Magic.png";
+const String currentLocation = "assets/images/Current location-pana 1.png";
+const String ease = "assets/images/ease.png";
+const String pyramids = "assets/images/pyramids.png";
