@@ -42,8 +42,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 20),
-            child: Expanded(
-              flex: 5,
+            child: SizedBox(
+              width: double.infinity,
               child: CustomButton(
                 text: _currentPage == totalPages - 1
                     ? 'Begin your journey'
@@ -60,7 +60,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                
                 },
               ),
-             
             ),
           ),
          const  SizedBox(height: 80)

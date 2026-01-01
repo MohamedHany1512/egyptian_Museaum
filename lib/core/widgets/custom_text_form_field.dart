@@ -34,7 +34,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                   onTap: () => setState(() {
                     isVisible = !isVisible!;
                   }),
-                  child: Icon(Icons.visibility_outlined),
+                  child: Icon(Icons.visibility_outlined,color: Colors.grey,),
                 )
               : null,
           enabledBorder: OutlineInputBorder(

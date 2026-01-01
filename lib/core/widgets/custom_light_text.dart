@@ -20,6 +20,7 @@ class CustomLightText extends StatelessWidget {
         fontFamily: "Lato",
         fontWeight: FontWeight.w500,
       ),
+      overflow: TextOverflow.visible,
     );
   }
 }
