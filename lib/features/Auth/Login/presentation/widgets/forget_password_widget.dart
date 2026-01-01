@@ -13,7 +13,9 @@ class ForgetPasswordWidget extends StatelessWidget {
     return Align(
       alignment: Alignment.centerRight,
       child: GestureDetector(
-        onTap: (){},
+        onTap: (){
+          Navigator.pushNamed(context, "/ResetYourPasswordScreen");
+        },
         child: CustomLightText(
           text: 'Forget Password?',
           color: AppColors.goldColor,
