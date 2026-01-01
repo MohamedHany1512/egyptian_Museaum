@@ -1,7 +1,7 @@
 import 'package:egyptain_museaum/features/on_boarding/screens/first_screen.dart';
 import 'package:egyptain_museaum/features/on_boarding/screens/second_screen.dart';
 import 'package:egyptain_museaum/features/on_boarding/screens/third_screen.dart';
-import 'package:egyptain_museaum/features/on_boarding/widgets/custom_button.dart';
+import 'package:egyptain_museaum/core/widgets/custom_button.dart';
 import 'package:egyptain_museaum/features/on_boarding/widgets/page_indicator.dart';
 import 'package:flutter/material.dart';
 
@@ -24,6 +24,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       
         children: [
           Expanded(
+            flex: 7,
             child: PageView(
               controller: _controller,
               onPageChanged: (index) => setState(() {
@@ -37,25 +38,32 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         
           PageIndicator(totalPages: totalPages, currentPage: _currentPage),
       
-      
+               const  SizedBox(height: 30),
+
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 20),
-            child: CustomButton(
-              text: _currentPage == totalPages - 1
-                  ? 'Begin your journey'
-                  : 'Next',
-              onTap: () {
-                if (_currentPage < totalPages - 1) {
-                  _controller.nextPage(
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.ease,
-                  );
-                } else {
-                  Navigator.pushReplacementNamed(context, "/RegisterScreen");
-                }
-              },
+            child: Expanded(
+              flex: 5,
+              child: CustomButton(
+                text: _currentPage == totalPages - 1
+                    ? 'Begin your journey'
+                    : 'Next',
+                onTap: () {
+                  if (_currentPage < totalPages - 1) {
+                    _controller.nextPage(
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.ease,
+                    );
+                  } else {
+                    Navigator.pushReplacementNamed(context, "/RegisterScreen");
+                  }
+               
+                },
+              ),
+             
             ),
           ),
+         const  SizedBox(height: 80)
         ],
       ),
     );

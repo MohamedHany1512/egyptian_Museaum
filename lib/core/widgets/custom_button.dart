@@ -1,6 +1,6 @@
 
 import 'package:egyptain_museaum/core/colors.dart';
-import 'package:egyptain_museaum/features/on_boarding/widgets/custom_light_text.dart';
+import 'package:egyptain_museaum/core/widgets/custom_light_text.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -21,7 +21,7 @@ final void Function()? onTap;
         width: double.infinity,
         height: 50,
         alignment: Alignment.center,
-        child: CustomLightText(text: text, color: Colors.white),
+        child: CustomLightText(text: text, color: Colors.white, fontSize: 16,),
       ),
     );
   }

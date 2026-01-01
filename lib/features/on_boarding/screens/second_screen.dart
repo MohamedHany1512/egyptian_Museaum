@@ -1,6 +1,6 @@
 import 'package:egyptain_museaum/core/constants.dart';
-import 'package:egyptain_museaum/features/on_boarding/widgets/custom_bold_text.dart';
-import 'package:egyptain_museaum/features/on_boarding/widgets/custom_light_text.dart';
+import 'package:egyptain_museaum/core/widgets/custom_bold_text.dart';
+import 'package:egyptain_museaum/core/widgets/custom_light_text.dart';
 import 'package:egyptain_museaum/features/on_boarding/widgets/custom_skip_text.dart';
 import 'package:flutter/material.dart';
 
@@ -25,13 +25,13 @@ class SecondScreen extends StatelessWidget {
              fit: BoxFit.contain),
 
             const SizedBox(height: 20),
-            const CustomBoldText(text: 'Meet Your AI Guide'),
+            const CustomBoldText(text: 'Meet Your AI Guide', fontSize: 24,),
 
             const SizedBox(height: 20),
             const CustomLightText(
               text:
                   'Ask questions, discover stories, and unlock the secrets of ancient Egypt with Maat, your personal AI assistant.',
-              color: Color(0xff666666),
+              color: Color(0xff666666), fontSize: 16,
             ),
           ],
         ),
