@@ -57,7 +57,9 @@ class ResetYourPasswordScreen extends StatelessWidget {
               const SizedBox(height: 80),
 
               // Register Button
-              CustomButton(text: "Send Code", onTap: () {}),
+              CustomButton(text: "Send Code", onTap: () {
+                Navigator.pushNamed(context, "/CheckEmailScreen");
+              }),
               const SizedBox(height: 20),
             
             ],

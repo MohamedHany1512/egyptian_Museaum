@@ -22,7 +22,7 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const LoginScreen());
        case '/ResetYourPasswordScreen':
         return MaterialPageRoute(builder: (_) => const ResetYourPasswordScreen());
-     case '/checkEmailScreen':
+     case '/CheckEmailScreen':
         return MaterialPageRoute(builder: (_) => const CheckEmailScreen());
 
     }
