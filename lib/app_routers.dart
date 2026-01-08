@@ -4,6 +4,7 @@ import 'package:egyptain_museaum/features/Auth/reset_password/presentation/scree
 import 'package:egyptain_museaum/features/Auth/reset_password/presentation/screens/create_new_password_screen.dart';
 import 'package:egyptain_museaum/features/Auth/reset_password/presentation/screens/locate.dart';
 import 'package:egyptain_museaum/features/Auth/reset_password/presentation/screens/reset_your_password_screen.dart';
+import 'package:egyptain_museaum/features/home/presentation/home_screen.dart';
 import 'package:egyptain_museaum/features/on_boarding/screens/first_screen.dart';
 import 'package:egyptain_museaum/features/on_boarding/screens/on_boarding_screen.dart';
 import 'package:egyptain_museaum/features/splash_screen/splash_screen.dart';
@@ -30,6 +31,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const CreateNewPasswordScreen());
    case '/Locate':
         return MaterialPageRoute(builder: (_) => const Locate());
+ case '/HomeScreen':
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
 
     }
     return null;
