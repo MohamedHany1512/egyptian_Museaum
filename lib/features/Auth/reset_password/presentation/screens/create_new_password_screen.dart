@@ -3,19 +3,13 @@ import 'package:egyptain_museaum/core/constants.dart';
 import 'package:egyptain_museaum/core/widgets/custom_bold_text.dart';
 import 'package:egyptain_museaum/core/widgets/custom_button.dart';
 import 'package:egyptain_museaum/core/widgets/custom_light_text.dart';
+import 'package:egyptain_museaum/core/widgets/custom_text_form_field.dart';
 import 'package:egyptain_museaum/features/Auth/reset_password/presentation/widgets/custom_arrow_back.dart';
-import 'package:egyptain_museaum/features/Auth/reset_password/presentation/widgets/otp_input.dart';
 import 'package:flutter/material.dart';
 
-class CheckEmailScreen extends StatefulWidget {
-  const CheckEmailScreen({super.key});
+class CreateNewPasswordScreen extends StatelessWidget {
+  const CreateNewPasswordScreen({super.key});
 
-  @override
-  State<CheckEmailScreen> createState() => _CheckEmailScreenState();
-}
-
-class _CheckEmailScreenState extends State<CheckEmailScreen> {
-  TextEditingController otpController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -34,22 +28,34 @@ class _CheckEmailScreenState extends State<CheckEmailScreen> {
                 child: Transform.scale(scale: 1.6, child: Image.asset(logo)),
               ),
               const SizedBox(height: 30),
-              CustomBoldText(text: 'Check Your Email  ', fontSize: 20),
+              CustomBoldText(text: 'Create New Password ', fontSize: 20),
               const SizedBox(height: 8),
               CustomLightText(
-                text: 'We’ve sent you a 6-digit code.\n Enter it below.',
+                text: 'Set a strong password to secure your account',
                 color: const Color(0xff666666),
                 fontSize: 12,
               ),
               const SizedBox(height: 20),
 
-              // OTP Code Input
-              OtpInput(controller: otpController),
-
+              CustomBoldText(text: 'New Password', fontSize: 12),
+              const SizedBox(height: 4),
+              const CustomTextFormField(
+                labelText: 'Enter your password',
+                isPassword: true,
+                textInputAction: TextInputAction.next,
+              ),
+              const SizedBox(height: 16),
+              CustomBoldText(text: 'Confirm New Password', fontSize: 12),
+              const SizedBox(height: 4),
+              const CustomTextFormField(
+                labelText: 'Enter your password',
+                isPassword: true,
+                textInputAction: TextInputAction.done,
+              ),
               const SizedBox(height: 80),
 
-              CustomButton(text: "Verify Code", onTap: () {
-                Navigator.pushNamed(context, "/CreateNewPasswordScreen");
+              CustomButton(text: " Confirm", onTap: () {
+                Navigator.pushReplacementNamed(context, "/Locate");
               }),
               const SizedBox(height: 20),
             ],

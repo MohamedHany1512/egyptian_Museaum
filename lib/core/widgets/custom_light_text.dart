@@ -13,7 +13,10 @@ class CustomLightText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
+      textScaler: TextScaler.noScaling,
+      
       text,
+     
       style: TextStyle(
         color: color,
         fontSize: fontSize,

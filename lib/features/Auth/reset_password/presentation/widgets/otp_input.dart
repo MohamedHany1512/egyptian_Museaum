@@ -6,14 +6,14 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 
 class OtpInput extends StatelessWidget {
   const OtpInput({
+    required this.controller,
     super.key,
   });
+    final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController otpController = TextEditingController();
     final screenWidth = MediaQuery.sizeOf(context).width;
-    final screenHeight = MediaQuery.sizeOf(context).height;
     final isMobile = screenWidth < 600;
     
     // Responsive values
@@ -43,7 +43,7 @@ class OtpInput extends StatelessWidget {
             }
             return null;
           },
-          controller: otpController,
+          controller: controller,
           appContext: context,
           beforeTextPaste: (text) => true,
           enableActiveFill: true,
@@ -53,7 +53,7 @@ class OtpInput extends StatelessWidget {
           animationType: AnimationType.slide,
           onCompleted: (value) {
             debugPrint(value);
-            debugPrint(otpController.text);
+            debugPrint(controller.text);
           },
           pinTheme: otpPinTheme(borderRadius, fieldHeight, fieldWidth, spacing),
         
