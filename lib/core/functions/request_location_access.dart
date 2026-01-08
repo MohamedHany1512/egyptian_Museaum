@@ -19,11 +19,7 @@ Future<void> requestLocationPermission() async {
     return;
   }
 
-  if (permission.isGranted) {
-    Position position = await Geolocator.getCurrentPosition(
-      desiredAccuracy: LocationAccuracy.high,
-    );
 
    
   }
-}
+
