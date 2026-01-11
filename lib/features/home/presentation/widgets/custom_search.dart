@@ -5,11 +5,11 @@ class CustomSearch extends StatefulWidget {
     super.key,
     required this.labelText,
 
-    required this.textInputAction,
+    required this.textInputAction,required this.icon,
   });
 
-  final String labelText;
-
+  final String labelText; 
+final Widget? icon ;
   final TextInputAction? textInputAction;
   @override
   State<CustomSearch> createState() => _CustomSearchState();
@@ -29,7 +29,7 @@ class _CustomSearchState extends State<CustomSearch> {
         textInputAction: widget.textInputAction,
 
         decoration: InputDecoration(
-          prefixIcon: Icon(Icons.location_on_sharp),
+          prefixIcon: widget.icon,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: const BorderSide(color: Colors.white, width: 1),

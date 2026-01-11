@@ -1,4 +1,6 @@
+import 'package:egyptain_museaum/core/widgets/custom_bold_text.dart';
 import 'package:egyptain_museaum/features/home/presentation/widgets/custom_app_bar.dart';
+import 'package:egyptain_museaum/features/home/presentation/widgets/custom_search.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,7 +12,26 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 27, vertical: 14),
-          child: Column(children: [SizedBox(height: 50), CustomAppBar()]),
+          child: Column(
+            children: [
+              const SizedBox(height: 50),
+              CustomAppBar(),
+              const SizedBox(height: 20),
+
+              CustomBoldText(
+                text: "Welcome to MAAT – The Grand Egyptian Museum Guide",
+                fontSize: 24,
+              ),
+                            const SizedBox(height: 20),
+
+                CustomSearch(
+                  labelText: "Search",
+                  
+                  textInputAction: TextInputAction.done,
+                  icon: Icon(Icons.search),
+                ),
+            ],
+          ),
         ),
       ),
     );

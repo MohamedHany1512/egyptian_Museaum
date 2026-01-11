@@ -1,4 +1,3 @@
-
 import 'package:egyptain_museaum/core/widgets/custom_bold_text.dart';
 import 'package:egyptain_museaum/features/home/presentation/widgets/custom_search.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +19,7 @@ class CustomAppBar extends StatelessWidget {
             labelText: "Floor1",
 
             textInputAction: TextInputAction.done,
+            icon: Icon(Icons.location_on_sharp),
           ),
         ),
         const SizedBox(width: 20),
