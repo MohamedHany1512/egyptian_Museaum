@@ -23,7 +23,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
     return Material(
       elevation: 0.5,
       borderRadius: BorderRadius.circular(8),
-      shadowColor: Colors.grey.withValues(alpha: 26), // 26/255 ≈ 10%
+      shadowColor: Colors.grey.withValues(alpha: 26), 
       child: TextFormField(
         textInputAction:widget. textInputAction,
 

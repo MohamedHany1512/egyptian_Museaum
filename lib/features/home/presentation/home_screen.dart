@@ -1,5 +1,7 @@
 import 'package:egyptain_museaum/core/widgets/custom_bold_text.dart';
 import 'package:egyptain_museaum/features/home/presentation/widgets/custom_app_bar.dart';
+import 'package:egyptain_museaum/features/home/presentation/widgets/custom_list_view_of_first_floor.dart';
+import 'package:egyptain_museaum/features/home/presentation/widgets/custom_row.dart';
 import 'package:egyptain_museaum/features/home/presentation/widgets/custom_search.dart';
 import 'package:egyptain_museaum/features/home/presentation/widgets/near_by_department.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +13,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+        
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 27, vertical: 14),
           child: Column(
@@ -38,6 +41,11 @@ class HomeScreen extends StatelessWidget {
                 child: CustomBoldText(text: "Near by", fontSize: 20),
               ),
               SizedBox(height: 200, child: NearByDepartment()),
+
+              const SizedBox(height: 20),
+             const CustomRow(),
+               const SizedBox(height: 12),
+               CustomListViewOfFirstFloor(),
             ],
           ),
         ),
@@ -45,3 +53,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
