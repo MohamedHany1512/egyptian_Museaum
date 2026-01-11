@@ -71,7 +71,9 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 80),
 
               // Register Button
-              CustomButton(text: "Login", onTap: () {}),
+              CustomButton(text: "Login", onTap: () {
+                Navigator.pushReplacementNamed(context, "/HomeScreen");
+              }),
               const SizedBox(height: 20),
               DoUHaveAcc(onLoginTap:(){
                 Navigator.pushReplacementNamed(context, "/RegisterScreen");

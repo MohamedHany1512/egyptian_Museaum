@@ -16,7 +16,7 @@ class CustomBoldText extends StatelessWidget {
         fontFamily: "Lato",
         color: Color(0xff2A2E39),
         fontSize: fontSize,
-        fontWeight: FontWeight.w800,
+        fontWeight: FontWeight.bold,
       ),
     );
   }

@@ -5,3 +5,5 @@ const String currentLocation = "assets/images/Current location-pana 1.png";
 const String ease = "assets/images/ease.png";
 const String pyramids = "assets/images/pyramids.png";
 const String logo ='assets/images/logo.png';
+const String ramses ='assets/images/ramses.jpg';
+const String vector ='assets/images/Vector.png';
