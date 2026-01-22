@@ -7,3 +7,5 @@ const String pyramids = "assets/images/pyramids.png";
 const String logo ='assets/images/logo.png';
 const String ramses ='assets/images/ramses.jpg';
 const String vector ='assets/images/Vector.png';
+const String journey ='assets/images/journey.png';
+const String chatBotai = 'assets/images/tabler_message-chatbot.png';
