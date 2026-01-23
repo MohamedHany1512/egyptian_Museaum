@@ -1,6 +1,7 @@
 import 'package:egyptain_museaum/core/widgets/custom_bold_text.dart';
 import 'package:egyptain_museaum/features/home/presentation/widgets/bottom_app_bar_items.dart';
 import 'package:egyptain_museaum/features/home/presentation/widgets/custom_app_bar.dart';
+import 'package:egyptain_museaum/features/home/presentation/widgets/custom_floating_action_button.dart';
 import 'package:egyptain_museaum/features/home/presentation/widgets/custom_list_view_of_first_floor.dart';
 import 'package:egyptain_museaum/features/home/presentation/widgets/custom_row.dart';
 import 'package:egyptain_museaum/features/home/presentation/widgets/custom_search.dart';
@@ -14,14 +15,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.qr_code_scanner),
-      ),
+      floatingActionButton: CustomFloatingActionButton(),
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(), // ده اللي بيعمل النتوء
-        notchMargin: 15, // المسافة بين FAB والبار
-        child: BottomAppBarItems(),
+        color: Colors.white,
+        
+        padding: EdgeInsets.zero,
+        elevation: 0,
+        shape: CircularNotchedRectangle(),
+        notchMargin: 15,
+        child: BottomAppBarItems(onTabSelected: (int p1) {}),
       ),
       body: SingleChildScrollView(
         child: Padding(

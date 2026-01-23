@@ -9,3 +9,4 @@ const String ramses ='assets/images/ramses.jpg';
 const String vector ='assets/images/Vector.png';
 const String journey ='assets/images/journey.png';
 const String chatBotai = 'assets/images/tabler_message-chatbot.png';
+const String qrCode ='assets/images/qr_scan.png';
